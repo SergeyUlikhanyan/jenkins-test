@@ -1,0 +1,5 @@
+job = Jenkins.instance.getItemByFullName("jobName")
+job.builds.each() { build ->
+  build.delete()
+}
+job.updateNextBuildNumber(1)
